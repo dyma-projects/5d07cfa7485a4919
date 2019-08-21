@@ -1,0 +1,16 @@
+<div class="container">
+  <hr>
+  <h2>Composant 1</h2>
+  <h3>{{title}} : {{interpolation}} </h3>
+  <h4 *ngIf=afficheOutPut>{{afficheOutPut}}</h4>
+  <div class = "form-group mt-5">
+    <input class = "form-control" [(ngModel)]="DoubleDataBinding" placeholder="Saisissez ce que vous voulez" />
+    <small class="mt-2" *ngIf = DoubleDataBinding>Double databinding en action : {{DoubleDataBinding}}</small>
+    <p *ngIf = message>{{message}}</p>
+  </div>
+  <button class="btn btn-primary mb-5" (click)="reinit()">Réinitialiser le champ</button>
+  <div class = "form-group mt-5">
+    <input class="form-control" [(ngModel)]='OutPutTest' placeholder="Saisissez un nouveau message d'accueil" />
+  </div>
+  <button class = "btn btn-primary mb-5" (click)='changeTitle(OutPutTest)'>Afficher titre saisi</button>
+</div>
